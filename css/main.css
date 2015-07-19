@@ -4,12 +4,7 @@ html,body{
 	height: 100%;
 	color: black;
 	background-color: #E0E0E0;
-}
-.menu{
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	height: 100px;
+  font-family: helvetica;
 }
 #map-canvas{
 	height: 100%;
@@ -18,33 +13,25 @@ html,body{
         padding: 0;
 
 }
-/* Start by setting display:none to make this hidden.
-   Then we position it in relation to the viewport window
-   with position:fixed. Width, height, top and left speak
-   for themselves. Background we set to 80% white with
-   our animation centered, and no-repeating */
-.modal {
-    display:    none;
-    position:   fixed;
-    z-index:    1000;
-    top:        0;
-    left:       0;
-    height:     100%;
-    width:      100%;
-    background: rgba( 255, 255, 255, .8 ) 
-                url('http://i.stack.imgur.com/FhHRx.gif') 
-                50% 50% 
-                no-repeat;
+#search-bar{
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  padding-left: 8px;
+  font-size: 15pt;
+  width: 400px;
+  height: 40px;
+  box-shadow: 10px 10px 5px #888888;
+  background-color: white;
 }
-
-/* When the body has the loading class, we turn
-   the scrollbar off with overflow:hidden */
-body.loading {
-    overflow: hidden;   
-}
-
-/* Anytime the body has the loading class, our
-   modal element will be visible */
-body.loading .modal {
-    display: block;
+#search-button{
+    position: fixed;
+  top: 8px;
+  left: 408px;
+  border: 0px;
+  width: 60px;
+  height: 40px;
+  color: white;
+  font-size: 10pt;
+  background-color: #448AFF;
 }

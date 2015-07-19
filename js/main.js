@@ -14,18 +14,9 @@ $(document).on({
 
 function search () {
     // body...
-    var language = document.getElementById('language').value;
-    var area = document.getElementById('location').value;
+    var language = document.getElementById('search-bar').value;
     var url = baseUrl;
-    if (language != null) {
-        if (area != null) {
-            url = url + description + language + "&" + location_param + area;
-        }else{
-            url = url + description + language;
-        }
-    }else if(area != null){
-        url = url + location_param + area;
-    }
+    url = url + description + language;
     console.log(url);
     $.ajax({
     type:"GET", 
@@ -90,8 +81,9 @@ function search () {
 function initialize() {
   geocoder = new google.maps.Geocoder();
   map = new google.maps.Map(document.getElementById('map-canvas'), {
-    zoom: 4,
-    center: {lat: 37.397, lng: -97}
+    zoom: 5,
+    center: {lat: 37.397, lng: -97},
+    disableDefaultUI: true
   });
 }
 
